@@ -1,0 +1,11 @@
+receptor = /home/fernando/Documents/GTK_Dynamo/GTKDynamo_27_JUL_2013_amber_STEEPEST_OK/receptor.obj01.pdbqt
+ligand = /home/fernando/Documents/GTK_Dynamo/GTKDynamo_27_JUL_2013_amber_STEEPEST_OK/obj02.pdbqt
+center_x = -11.74
+center_y = 22.91
+center_z = 15.6
+size_x =  25.50
+size_y =  24.00
+size_z =  25.12
+out = /home/fernando/Documents/GTK_Dynamo/GTKDynamo_27_JUL_2013_amber_STEEPEST_OK/obj02.docked.pdbqt
+log = /home/fernando/Documents/GTK_Dynamo/GTKDynamo_27_JUL_2013_amber_STEEPEST_OK/obj02.vina.log
+num_modes = 10

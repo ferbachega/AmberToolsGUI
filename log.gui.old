@@ -1,0 +1,61 @@
+
+--------------------------------------------------------------------------------
+              Summary for System "defa ult_ name                 "
+--------------------------------------------------------------------------------
+
+---------------------------- Atom Container Summary ----------------------------
+Number of Atoms        =           1262  Number of Heavy Atoms  =            427
+Number of Hydrogens    =            835  Number of Unknowns     =              0
+--------------------------------------------------------------------------------
+
+----------------------------- Connectivity Summary -----------------------------
+Atoms                  =           1262
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+                      Summary for Energy Model "AMBER/ABFS"
+--------------------------------------------------------------------------------
+
+----------------------------------- Summary for MM Model "AMBER" -----------------------------------
+LJ 1-4 Scaling                   =          0.500  El. 1-4 Scaling                  =          0.833
+Number of MM Atoms               =           1262  Number of MM Atom Types          =              9
+Total MM Charge                  =           0.00  Harmonic Bond Terms              =           1263
+Harmonic Bond Parameters         =             10  Harmonic Angle Terms             =             41
+Harmonic Angle Parameters        =             12  Fourier Dihedral Terms           =             60
+Fourier Dihedral Parameters      =              4  Fourier Improper Terms           =             13
+Fourier Improper Parameters      =              1  Exclusions                       =           1358
+1-4 Interactions                 =             54  LJ Parameters Form               =          AMBER
+LJ Parameters Types              =              8  1-4 Lennard-Jones Form           =          AMBER
+1-4 Lennard-Jones Types          =              8
+----------------------------------------------------------------------------------------------------
+
+----------------------------- ABFS NB Model Summary ----------------------------
+Dielectric             =       1.000000  El. 1-4 Scaling        =       0.833333
+Damping Cutoff         =       0.500000  Inner Cutoff           =       8.000000
+List Cutoff            =      13.500000  Outer Cutoff           =      12.000000
+QC/MM Coupling         =    RC Coupling  Use Centering          =          False
+--------------------------------------------------------------------------------
+
+-------------------------- Pairlist Generator Summary --------------------------
+Cell Size              =          6.750  Cutoff                 =         13.500
+Cutoff Cell Size Factor =          0.500  Grid Cell/Cell Method  =           True
+Minimum Cell Extent    =              2  Minimum Cell Size      =          3.000
+Minimum Extent Factor  =          1.500  Minimum Points         =            500
+Sort Indices           =          False
+--------------------------------------------------------------------------------
+
+------------------------------- Sequence Summary -------------------------------
+Number of Atoms            =       1262  Number of Components       =        413
+Number of Entities         =          1  Number of Linear Polymers  =          0
+Number of Links            =          0  Number of Variants         =          0
+--------------------------------------------------------------------------------
+
+------------------------------- Symmetry Summary -------------------------------
+Crystal Class          =   Orthorhombic
+--------------------------------------------------------------------------------
+
+----------------------- Transformation3 Container Summary ----------------------
+Transformations        =              1  Identity               =              0
+Inverse Pairs          =              0  Self Inverses          =              1
+Absent Inverses        =              0
+--------------------------------------------------------------------------------

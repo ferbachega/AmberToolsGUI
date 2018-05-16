@@ -1,0 +1,185 @@
+
+						---- GTKDynamo ----
+	                    
+	
+     Copyright 2012 Jose Fernando R Bachega  <ferbachega@gmail.com>
+
+             visit: https://sites.google.com/site/gtkdynamo/
+
+     This program is free software; you can redistribute it and/or modify
+     it under the terms of the GNU General Public License as published by
+     the Free Software Foundation; either version 2 of the License, or
+     (at your option) any later version.
+
+     This program is distributed in the hope that it will be useful,
+     but WITHOUT ANY WARRANTY; without even the implied warranty of
+     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+     GNU General Public License for more details.
+
+     GTKDynamo team:
+     - Jose Fernando R Bachega  < Univesity of Sao Paulo - SP, Brazil                              >
+     - Troy Wymore              < Pittsburgh Super Computer Center, Pittsburgh PA - USA            >
+     - Martin Field             < Institut de Biologie Structurale, Grenoble, France               >		
+     - Richard Garratt          < Univesity of Sao Paulo - SP, Brazil                              >
+     - Luis Fernando S M Timmers< Pontifical Catholic University of Rio Grande do Sul - RS, Brazil >
+
+	Special thanks to:
+     - Lucas Assirati           < Univesity of Sao Paulo - SP, Brazil                              >
+     - Leonardo R Bachega       < University of Purdue - West Lafayette, IN - USA                  >
+	
+
+       				----   W A R N I N G:   ----
+	
+To correctly calculate surfaces (using gassian CUBE files):
+Please replace the file ... / pDynamo-1.7.2/pBabel-1.7.2/pBabel/GaussianCubeFileWriter.py, 
+by the file "GaussianCubeFileWriter.py" which is distributed together with GTKDynamo.	
+
+Our version of GTKDynamo works only with "English" language. If your linux was installed 
+with different language (specially Spanish or Portuguese), you must change this option before 
+you log-in.  GKTDynamo is fully compatible with Linux (Ubuntu, Fedora, OpenSuSe etc) and Mac OSX.
+
+
+
+				---	GTKDynamo Installation	---
+
+
+	--	Linux	-- 
+
+
+		External libraries
+
+      GTKDynamo required that some external libraries must be installed earlier. 
+The linux repository can download four external libraries, if you are using Ubuntu 
+just type:
+      
+	>	sudo apt-get install python-matplotlib python-numpy python-gtk* pymol
+
+or if you are using OpenSuSe type:
+
+	>	sudo zypper install python-matplotlib python-numpy-devel python-get-devel pymol
+
+
+      The pDynamo library installation is fully explained at the pDynamo website, 
+the ORCA binary files can be downloaded at the website 
+(http://www.mpibac.mpg.de/bac/logins/neese/description.php) and these binaries 
+must been set in the PATH.
+
+
+		GTKDynamo
+       
+      The GTKDynamo does not need to be installed, you just go the GTKDynamo 
+folder and type:
+      
+	>	pymol GTKDynamo.py
+	
+	
+	--	Mac OS X	--
+
+
+	The interface implementation on Mac OS X is fully accepted, however we just need 
+to clarify some tricks about PyMol installation using MacPorts. 
+All Mac OS X users can download MacPorts (http://www.macports.org)	to easily install 
+programs, but sometimes we need to change some files to getthe right (or the more 
+appropriate)	libraries. We recommend using MacPorts to install PyMolp program with 
+python 2.7. The default"Portfile" when we are using MacPorts to get PyMol is python 2.6, 
+so we need to replace it by python 2.7 library.				
+Usually, MacPorts will create a new directory in your computer (/opt/local). All programs 
+will be installed using the information provided by the "Portfile", and it's this file thatwe 
+have to edit. Do itis simple.Go to the terminal and type:
+
+
+	$ cd opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/science/pymol/
+	
+
+      In this folder we have to edit the "Portfile" file:	
+      
+________________________________________________________________________________________________
+|PortSystem	1.0										|
+|PortGroup**	python26 1.0									|
+|												|
+|name			pymol	    								|
+|version		1.5		    							|
+|revision		1    									| 
+|categories		science									|
+|maintainers		bromo.med.uc.edu:howarth						|
+|description		Molecular graphics system						|
+|long_description	PyMOL is a molecular graphics system with an embedded Python interpreter|  
+|		designed for real-time visualization and rapid generation of high-quality	|   
+|		molecular graphics images and animations.					|
+|												|
+|platforms			darwin								|
+|												|
+|homepage			http://www.pymol.org/    					|
+|												|
+|master_sites		sourceforge    								|
+|fetch.type			svn								|
+|svn.url			http://pymol.svn.sourceforge.net/svnroot/pymol/trunk/pymol    	|
+|svn.revision		3996    								|
+|worksrcdir			pymol  								| 
+|												|
+|depends_lib**		port:freetype port:libpng port:python26 port:py26-pmv port:py26-numpy\	|
+|			port:py26-scipy port:mesa port:glew port:py26-tkinter port:freeglut	|
+|_______________________________________________________________________________________________|    
+      
+In this file we have to change the parts highlighted to:
+
+________________________________________________________________________________________________
+|PortSystem	1.0										|
+|PortGroup**	python27 1.0									|
+|												|
+|name			pymol	    								|
+|version		1.5		    							|
+|revision		1    									| 
+|categories		science									|
+|maintainers		bromo.med.uc.edu:howarth						|
+|description		Molecular graphics system						|
+|long_description	PyMOL is a molecular graphics system with an embedded Python interpreter|  
+|		designed for real-time visualization and rapid generation of high-quality	|   
+|		molecular graphics images and animations.					|
+|												|
+|platforms			darwin								|
+|												|
+|homepage			http://www.pymol.org/    					|
+|												|
+|master_sites		sourceforge    								|
+|fetch.type			svn								|
+|svn.url			http://pymol.svn.sourceforge.net/svnroot/pymol/trunk/pymol    	|
+|svn.revision		3996    								|
+|worksrcdir			pymol  								| 
+|												|
+|depends_lib**		port:freetype port:libpng port:python27 port:py27-pmv port:py27-numpy\	|
+|			port:py27-scipy port:mesa port:glew port:py27-tkinter port:freeglut	|
+|_______________________________________________________________________________________________|   
+      
+	After, just type:
+
+	$ sudo port install pymol
+      
+      This command will install PyMol with python 2.7. ?Since GTK_Dynamo requires 
+GTK and Matplotlib libraries, type: 
+	
+	$ sudo port install py27-gtk py27-matplotlib
+
+      After these libraries were installed, your GTK_Dynamo interface should work 
+properly. However, we need to perform one more step to setup GTK Dynamo in a 
+fashionable way, to type:
+	
+	$ vi .gtkrc-2.0
+
+      and add this highlighted lines:
+ _______________________________________________________________________
+|									|
+|# -- THEME AUTO-WRITTEN DO NOT EDIT -- #				|
+|include "/opt/local/share/themes/MurrinaNGCompact/gtk-2.0/gtkrc"	|
+|									|
+|include "/Users/luisfernando/.gtkrc-2.0.mine"				|
+|									|
+|**gtk-toolbar-style   = GTK_TOOLBAR_ICONS	**			|
+|**gtk-font-name = "Droid Sans 8"		**			|
+|									|
+|#	--	THEME AUTO-WRITTEN DO NOT EDIT		--	#	|
+|_______________________________________________________________________|
+
+
+To check if the interface works well, go to GTK_Dynamo folder and type:
+      $ pymol GTK_Dynamo.py
